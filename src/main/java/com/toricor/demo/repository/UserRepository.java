@@ -1,6 +1,6 @@
 package com.toricor.demo.repository;
 
-import com.toricor.demo.domain.Customer;
+import com.toricor.demo.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -19,7 +19,7 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class CustomerRepository {
+public class UserRepository {
     @Autowired
     NamedParameterJdbcTemplate jdbcTemplate;
 
@@ -28,47 +28,46 @@ public class CustomerRepository {
     @PostConstruct
     public void init() {
         insert = new SimpleJdbcInsert((JdbcTemplate) jdbcTemplate.getJdbcOperations())
-                .withTableName("customers")
+                .withTableName("user")
                 .usingGeneratedKeyColumns("id");
     }
 
-    private static final RowMapper<Customer> customerRowMapper = (rs, i) -> {
+    private static final RowMapper<User> userRowMapper = (rs, i) -> {
         Integer id = rs.getInt("id");
-        String firstName = rs.getString("first_name");
-        String lastName  = rs.getString("last_name");
-        return new Customer(id, firstName, lastName);
+        String Name = rs.getString("name");
+        return new User(id, Name);
     };
 
-    public List<Customer> findAll() {
-        List<Customer> customers = jdbcTemplate.query(
-                "SELECT id, first_name, last_name FROM customers ORDER BY id",
-                customerRowMapper);
-        return customers;
+    public List<User> findAll() {
+        List<User> users = jdbcTemplate.query(
+                "SELECT id, name FROM user ORDER BY id",
+                userRowMapper);
+        return users;
     }
 
-    public Customer findOne(Integer id) {
+    public User findOne(Integer id) {
         SqlParameterSource param = new MapSqlParameterSource().addValue("id", id);
         return jdbcTemplate.queryForObject(
-                "SELECT id, first_name, last_name FROM customers WHERE id=:id",
+                "SELECT id, name FROM user WHERE id=:id",
                 param,
-                customerRowMapper);
+                userRowMapper);
     }
 
-    public Customer save(Customer customer) {
-        SqlParameterSource param = new BeanPropertySqlParameterSource(customer);
-        if (customer.getId() == null) {
+    public User save(User user) {
+        SqlParameterSource param = new BeanPropertySqlParameterSource(user);
+        if (user.getId() == null) {
             Number key = insert.executeAndReturnKey(param);
-            customer.setId(key.intValue());
+            user.setId(key.intValue());
         } else {
-            jdbcTemplate.update("UPDATE customers SET first_name=:firstName, last_name=:lastName WHERE id=:id",
+            jdbcTemplate.update("UPDATE user SET name=:name WHERE id=:id",
                     param);
         }
-        return customer;
+        return user;
     }
 
     public void delete(Integer id) {
         SqlParameterSource param = new MapSqlParameterSource().addValue("id", id);
-        jdbcTemplate.update("DELETE FROM customers WHERE id=:id",
+        jdbcTemplate.update("DELETE FROM user WHERE id=:id",
                 param);
     }
 }

@@ -1,7 +1,13 @@
 spring:
   datasource:
-    driverClassName: org.h2.Driver
-    url: jdbc:h2:file:/tmp/testdb
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/training
     sqlScriptEncoding: UTF-8
     username: root
     password:
+logging:
+  level:
+    root: INFO
+    sample:
+      mybatis:
+        mapper: TRACE
