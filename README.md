@@ -35,7 +35,8 @@ port: 8080
 
 ## RDBMS
 MySQL 5.6
-
+## DB
+training (src/main/resources/application.yml)
 ## DDL
 src/main/resources/schema.sql
 
