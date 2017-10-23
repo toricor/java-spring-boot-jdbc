@@ -12,26 +12,26 @@ ii)`./gradlew bootRun` or `./gradlew build && java -jar java-spring-boot-jdbc-0.
 ## API Endpoint
 port: 8080
 ### Event(s)
-- GET    /api/events      # All events
-- GET    /api/events/:id  # A event
-- POST   /api/events      # Create a new event 
-- PUT    /api/events/:id  # Update the event
-- DELETE /api/events/:id  # Delete the event
+- `GET    /api/events`      # All events
+- `GET    /api/events/:id`  # A event
+- `POST   /api/events`      # Create a new event 
+- `PUT    /api/events/:id`  # Update the event
+- `DELETE /api/events/:id`  # Delete the event
 
 ### User(s)
-- GET    /api/users      # All users
-- GET    /api/users/:id  # A user
-- POST   /api/users      # Create a new user 
-- PUT    /api/users/:id  # Update the user
-- DELETE /api/users/:id  # Delete the user
+- `GET    /api/users`      # All users
+- `GET    /api/users/:id`  # A user
+- `POST   /api/users`      # Create a new user 
+- `PUT    /api/users/:id`  # Update the user
+- `DELETE /api/users/:id`  # Delete the user
 
 ### Reservation(s)
-- GET    /api/reservations        # All reservations
-- GET    /api/reservations/joined # All reservations with event and user names
-- GET    /api/reservations/:id    # A reservation
-- POST   /api/reservations        # Create a new reservation 
-- PUT    /api/reservations/:id    # Update the reservation
-- DELETE /api/reservations/:id    # Delete the reservation
+- `GET    /api/reservations`        # All reservations
+- `GET    /api/reservations/joined` # All reservations with event and user names
+- `GET    /api/reservations/:id`    # A reservation
+- `POST   /api/reservations`        # Create a new reservation 
+- `PUT    /api/reservations/:id`    # Update the reservation
+- `DELETE /api/reservations/:id`    # Delete the reservation
 
 ## RDBMS
 MySQL 5.6
