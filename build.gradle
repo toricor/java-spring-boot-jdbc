@@ -24,6 +24,7 @@ repositories {
 
 
 dependencies {
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '1.5.7.RELEASE'
 	compile('org.springframework.boot:spring-boot-starter-jdbc')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile 'com.github.marcosemiao.log4jdbc:log4jdbc:0.2.0'
