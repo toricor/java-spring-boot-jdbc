@@ -1,4 +1,4 @@
-package com.toricor.demo.domain;
+package com.toricor.training.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,7 +1,7 @@
-package com.toricor.demo.service;
+package com.toricor.training.service;
 
-import com.toricor.demo.domain.User;
-import com.toricor.demo.repository.UserRepository;
+import com.toricor.training.domain.User;
+import com.toricor.training.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

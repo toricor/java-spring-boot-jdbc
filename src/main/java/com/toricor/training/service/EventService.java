@@ -1,7 +1,7 @@
-package com.toricor.demo.service;
+package com.toricor.training.service;
 
-import com.toricor.demo.domain.Event;
-import com.toricor.demo.repository.EventRepository;
+import com.toricor.training.domain.Event;
+import com.toricor.training.repository.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

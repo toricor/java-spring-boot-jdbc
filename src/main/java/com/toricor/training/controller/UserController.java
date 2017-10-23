@@ -1,7 +1,7 @@
-package com.toricor.demo.controller;
+package com.toricor.training.controller;
 
-import com.toricor.demo.domain.User;
-import com.toricor.demo.service.UserService;
+import com.toricor.training.domain.User;
+import com.toricor.training.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

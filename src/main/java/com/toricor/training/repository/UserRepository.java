@@ -1,6 +1,6 @@
-package com.toricor.demo.repository;
+package com.toricor.training.repository;
 
-import com.toricor.demo.domain.User;
+import com.toricor.training.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

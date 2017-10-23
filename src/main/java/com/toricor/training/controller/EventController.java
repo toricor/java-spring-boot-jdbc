@@ -1,7 +1,7 @@
-package com.toricor.demo.controller;
+package com.toricor.training.controller;
 
-import com.toricor.demo.domain.Event;
-import com.toricor.demo.service.EventService;
+import com.toricor.training.domain.Event;
+import com.toricor.training.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

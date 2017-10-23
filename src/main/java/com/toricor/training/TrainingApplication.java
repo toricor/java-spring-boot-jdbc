@@ -1,4 +1,4 @@
-package com.toricor.demo;
+package com.toricor.training;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.toricor.demo;
+package com.toricor.training;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
