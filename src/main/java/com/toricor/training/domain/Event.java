@@ -1,5 +1,6 @@
 package com.toricor.training.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -10,6 +11,8 @@ import java.sql.Timestamp;
 public class Event {
     private Integer id;
     private String title;
+
+    @JsonIgnore
     private String description;
     private Integer author;
     private String place;
